@@ -1,0 +1,187 @@
+
+==============================================================================
+TOKEN ECONOMICS - ONE QUESTION, MANY MODELS
+==============================================================================
+Question   : What is AI?
+Models     : 5
+max_tokens : 1024   temperature: 0.7
+
+-> asking openai/gpt-oss-20b ...
+-> asking openai/gpt-oss-120b ...
+-> asking openai/gpt-oss-safeguard-20b ...
+-> asking qwen/qwen3.8-27b ...
+-> asking allam-2-7b ...
+
+==============================================================================
+ANSWERS
+==============================================================================
+------------------------------------------------------------------------------
+GPT-OSS 20B  [openai/gpt-oss-20b]
+------------------------------------------------------------------------------
+  **Artificial Intelligence (AI)** is a field of computer science that
+  builds systems capable of performing tasks that normally require human
+  intelligence. In other words, AI lets machines *think*, *learn*, and
+  *act* in ways that mimic human cognition.
+
+  ---
+
+  ### Core Components
+
+  | Component | What it does | Example |
+  |-----------|--------------|---------|
+  | **Perception** | Recognizes patterns in raw data (vision, audio, text)
+  | Facial recognition, speech-to-text |
+  | **Reasoning** | Makes decisions or solves problems | Chess engines,
+  medical diagnosis |
+  | **Learning** | Improves performance from ...[truncated for display]
+
+  Input tokens   :     75   (the question + chat overhead)
+  Output tokens  :    910   (the answer)
+  Total tokens   :    985
+  Input cost     : $0.000006  @ $0.075/1M
+  Output cost    : $0.000273  @ $0.3/1M
+  Cost for this question: $0.000279
+  Latency        : 1.54s   |  593 output tok/s   |  answer 3,415 chars
+
+------------------------------------------------------------------------------
+GPT-OSS 120B  [openai/gpt-oss-120b]
+------------------------------------------------------------------------------
+  **Artificial Intelligence (AI)** is a branch of computer science that
+  focuses on creating systems capable of performing tasks that normally
+  require human intelligence. These tasks include learning, reasoning,
+  problem‑solving, perception, language understanding, and even
+  creativity.
+
+  ### Core Ideas
+  | Concept | What It Means |
+  |---------|---------------|
+  | **Machine Learning (ML)** | Algorithms that improve their performance
+  automatically through experience (e.g., recognizing images after seeing
+  many examples). |
+  | **Deep Learning** | A subset of ML that uses multi‑layered neural
+  networks to mod ...[truncated for display]
+
+  Input tokens   :     75   (the question + chat overhead)
+  Output tokens  :    886   (the answer)
+  Total tokens   :    961
+  Input cost     : $0.000011  @ $0.15/1M
+  Output cost    : $0.000532  @ $0.6/1M
+  Cost for this question: $0.000543
+  Latency        : 2.57s   |  345 output tok/s   |  answer 4,189 chars
+
+------------------------------------------------------------------------------
+Safeguard GPT-OSS 20B  [openai/gpt-oss-safeguard-20b]
+------------------------------------------------------------------------------
+  **Artificial Intelligence (AI)** is a branch of computer science that
+  seeks to create systems capable of performing tasks that normally
+  require human intelligence. These tasks include:
+
+  | **Task** | **Typical Human Capability** | **AI Approach** |
+  |----------|------------------------------|-----------------|
+  | Understanding language | Comprehending and generating text | Natural
+  Language Processing (NLP) |
+  | Recognizing objects | Visual perception | Computer Vision |
+  | Making decisions | Reasoning and planning | Machine Learning, Planning
+  algorithms |
+  | Learning from experience | Adaptation | R ...[truncated for display]
+
+  Input tokens   :     75   (the question + chat overhead)
+  Output tokens  :  1,024   (the answer)
+  Total tokens   :  1,099
+  Input cost     : $0.000006  @ $0.075/1M
+  Output cost    : $0.000307  @ $0.3/1M
+  Cost for this question: $0.000313
+  Latency        : 1.53s   |  670 output tok/s   |  answer 4,044 chars
+  NOTE: the answer hit max_tokens, so output tokens are capped, not the model's natural length.
+
+------------------------------------------------------------------------------
+Qwen 3.8 27B  [qwen/qwen3.8-27b]
+------------------------------------------------------------------------------
+  **AI**, or **Artificial Intelligence**, is a branch of computer science
+  focused on creating systems capable of performing tasks that typically
+  require human intelligence.
+
+  ### Core Idea
+  At its heart, AI is about building machines that can:
+  - **Learn** from data (rather than being explicitly programmed for every
+  scenario).
+  - **Reason** and solve problems.
+  - **Perceive** the environment (e.g., through vision or speech).
+  - **Make decisions** or take actions to achieve specific goals.
+
+  ### Key Types of AI
+  1. **Narrow AI (Weak AI)**:
+     - Specialized for specific tasks.
+     - Examples: Virtual assis ...[truncated for display]
+
+  Input tokens   :     16   (the question + chat overhead)
+  Output tokens  :    515   (the answer)
+  Total tokens   :    531
+  Input cost     : $0.000013  @ $0.8/1M
+  Output cost    : $0.002060  @ $4.0/1M
+  Cost for this question: $0.002073
+  Latency        : 1.25s   |  412 output tok/s   |  answer 2,404 chars
+
+------------------------------------------------------------------------------
+Allam 2 7B  [allam-2-7b]
+------------------------------------------------------------------------------
+  AI, or Artificial Intelligence, refers to the development of computer
+  systems or machines that are capable of performing tasks that typically
+  require human intelligence to accomplish. These tasks can include
+  understanding language, making decisions, learning from experience, and
+  recognizing patterns or images.
+
+  The concept of AI dates back to the 1950s, with pioneers like John
+  McCarthy coining the term "artificial intelligence." However, it wasn't
+  until the advent of computers and advancements in algorithms and data
+  processing that AI became a reality.
+
+  There are several approaches to achievin ...[truncated for display]
+
+  Input tokens   :     11   (the question + chat overhead)
+  Output tokens  :    470   (the answer)
+  Total tokens   :    481
+  Cost           : n/a (pricing not published for this model)
+  Latency        : 0.69s   |  681 output tok/s   |  answer 2,327 chars
+
+==============================================================================
+TOKEN + COST COMPARISON (same question, every model)
+==============================================================================
+Model                             In    Out  Total    Cost/req  Latency   Tok/s
+-------------------------------------------------------------------------------
+openai/gpt-oss-20b                75    910    985   $0.000279    1.54s     593
+openai/gpt-oss-safeguard-20b      75  1,024  1,099   $0.000313    1.53s     670
+openai/gpt-oss-120b               75    886    961   $0.000543    2.57s     345
+qwen/qwen3.8-27b                  16    515    531   $0.002073    1.25s     412
+allam-2-7b                        11    470    481         n/a    0.69s     681
+
+==============================================================================
+WHAT THE NUMBERS SAY
+==============================================================================
+Most verbose   : openai/gpt-oss-safeguard-20b -> 1,024 output tokens
+Most concise   : allam-2-7b -> 470 output tokens
+Verbosity gap  : 2.2x more output tokens for the same question
+Fastest output : allam-2-7b -> 681 tokens/sec
+Capped by max_tokens: openai/gpt-oss-safeguard-20b
+  -> raise --max-tokens to compare how long each model naturally answers.
+Cheapest       : openai/gpt-oss-20b -> $0.000279
+Most expensive : qwen/qwen3.8-27b -> $0.002073
+Cost spread    : 7.4x between cheapest and most expensive
+
+Input vs output share of the bill:
+  openai/gpt-oss-20b             input   2.0%   output  98.0%
+  openai/gpt-oss-safeguard-20b   input   1.8%   output  98.2%
+  openai/gpt-oss-120b            input   2.1%   output  97.9%
+  qwen/qwen3.8-27b               input   0.6%   output  99.4%
+
+The same question billed at scale (identical token counts):
+Model                              1,000 req 1,000,000 req
+openai/gpt-oss-20b                     $0.28       $278.62
+openai/gpt-oss-safeguard-20b           $0.31       $312.82
+openai/gpt-oss-120b                    $0.54       $542.85
+qwen/qwen3.8-27b                       $2.07     $2,072.80
+
+Takeaway: the question is identical, so input tokens barely move;
+what changes the bill is how many output tokens each model writes
+and how much that model charges per output token.
+
