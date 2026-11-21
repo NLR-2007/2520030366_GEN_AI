@@ -1,0 +1,47 @@
+﻿Prompt,Temperature,Rank,Token ID,Candidate Token,Raw Logit,Scaled Logit,Probability (%)
+hi,2.0,1,11,"','",-28.0082,-14.0041,0.16
+hi,2.0,2,13,'.',-28.1591,-14.0795,0.15
+hi,2.0,3,12,'-',-28.778,-14.389,0.11
+hi,2.0,4,290,' and',-28.8633,-14.4317,0.11
+hi,2.0,5,198,'\n',-28.9798,-14.4899,0.1
+hi,2.0,6,286,' of',-29.4981,-14.749,0.08
+The capital of France is,1.0,1,262,' the',-100.2498,-100.2498,8.46
+The capital of France is,1.0,2,783,' now',-100.8175,-100.8175,4.79
+The capital of France is,1.0,3,257,' a',-100.8555,-100.8555,4.62
+The capital of France is,1.0,4,4881,' France',-101.2102,-101.2102,3.24
+The capital of France is,1.0,5,6342,' Paris',-101.2143,-101.2143,3.22
+The capital of France is,1.0,6,287,' in',-101.4052,-101.4052,2.66
+The capital of France is,1.0,7,635,' also',-101.4141,-101.4141,2.64
+The capital of France is,1.0,8,407,' not',-101.5168,-101.5168,2.38
+The capital of France is,0.2,1,262,' the',-100.2498,-501.2491,88.24
+The capital of France is,0.2,2,783,' now',-100.8175,-504.0877,5.16
+The capital of France is,0.2,3,257,' a',-100.8555,-504.2775,4.27
+The capital of France is,0.2,4,4881,' France',-101.2102,-506.0508,0.72
+The capital of France is,0.2,5,6342,' Paris',-101.2143,-506.0714,0.71
+The capital of France is,0.2,6,287,' in',-101.4052,-507.026,0.27
+The capital of France is,0.2,7,635,' also',-101.4141,-507.0705,0.26
+The capital of France is,0.2,8,407,' not',-101.5168,-507.5838,0.16
+The capital of France is,2.0,1,262,' the',-100.2498,-50.1249,0.47
+The capital of France is,2.0,2,783,' now',-100.8175,-50.4088,0.36
+The capital of France is,2.0,3,257,' a',-100.8555,-50.4278,0.35
+The capital of France is,2.0,4,4881,' France',-101.2102,-50.6051,0.29
+The capital of France is,2.0,5,6342,' Paris',-101.2143,-50.6071,0.29
+The capital of France is,2.0,6,287,' in',-101.4052,-50.7026,0.27
+The capital of France is,2.0,7,635,' also',-101.4141,-50.707,0.27
+The capital of France is,2.0,8,407,' not',-101.5168,-50.7584,0.25
+I woke up early and decided to,1.0,1,467,' go',-147.7158,-147.7158,18.45
+I woke up early and decided to,1.0,2,1011,' take',-148.585,-148.585,7.73
+I woke up early and decided to,1.0,3,651,' get',-149.0029,-149.0029,5.09
+I woke up early and decided to,1.0,4,466,' do',-149.3104,-149.3104,3.74
+I woke up early and decided to,1.0,5,923,' start',-149.8796,-149.8796,2.12
+I woke up early and decided to,1.0,6,1949,' try',-149.9238,-149.9238,2.03
+I woke up early and decided to,1.0,7,2198,' check',-149.9334,-149.9334,2.01
+I woke up early and decided to,1.0,8,711,' play',-150.0665,-150.0665,1.76
+She opened the door and saw,1.0,1,257,' a',-77.6512,-77.6512,16.61
+She opened the door and saw,1.0,2,262,' the',-77.8392,-77.8392,13.76
+She opened the door and saw,1.0,3,326,' that',-78.7409,-78.7409,5.59
+She opened the door and saw,1.0,4,607,' her',-79.1032,-79.1032,3.89
+She opened the door and saw,1.0,5,502,' me',-79.7225,-79.7225,2.09
+She opened the door and saw,1.0,6,734,' two',-79.77,-79.77,2.0
+She opened the door and saw,1.0,7,281,' an',-79.8531,-79.8531,1.84
+She opened the door and saw,1.0,8,465,' his',-79.9908,-79.9908,1.6
