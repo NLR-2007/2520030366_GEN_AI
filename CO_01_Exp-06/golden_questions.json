@@ -1,0 +1,277 @@
+{
+  "version": "1.0",
+  "created": "2026-11-12",
+  "corpus": "corpus/manifest.json",
+  "notes": [
+    "The golden question set for 25CS2207E. Frozen: these questions are re-run unchanged after every module so results are comparable across releases v0.1 -> v1.0.",
+    "Every expected_answer below was checked against the corpus text at the revision recorded in corpus/manifest.json. Sources name a document slug and section; the runner resolves the URL and revision id from the manifest so provenance lives in one place.",
+    "must_include terms drive the automatic keyword score. They are deliberately short and distinctive - the grader checks whether the key facts appear, not whether the wording matches.",
+    "Questions with answerable=false are NOT in the corpus. A grounded system is expected to decline them. They are the hallucination trap: a closed-book model will usually answer anyway, and that is the behaviour the baseline is meant to expose."
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "module": "module-1",
+      "category": "definition",
+      "difficulty": "easy",
+      "answerable": true,
+      "question": "What is machine learning?",
+      "expected_answer": "Machine learning is a field of study within artificial intelligence concerned with developing statistical algorithms that learn from data and generalize to unseen data, performing tasks without being explicitly programmed. Statistics and mathematical optimisation form its foundations.",
+      "must_include": ["artificial intelligence", "learn from data", "generalize", "without being explicitly programmed"],
+      "source": {"doc": "machine_learning", "section": "lead"}
+    },
+    {
+      "id": "Q02",
+      "module": "module-1",
+      "category": "definition",
+      "difficulty": "easy",
+      "answerable": true,
+      "question": "What does the word 'deep' refer to in deep learning, and how many layers can such networks have?",
+      "expected_answer": "'Deep' refers to the use of multiple layers in the neural network. The number of layers ranges from three to several hundred or thousands.",
+      "must_include": ["multiple layers", "three", "thousands"],
+      "source": {"doc": "deep_learning", "section": "lead"}
+    },
+    {
+      "id": "Q03",
+      "module": "module-1",
+      "category": "hierarchy",
+      "difficulty": "medium",
+      "answerable": true,
+      "question": "How does generative AI relate to artificial intelligence, and what does it produce?",
+      "expected_answer": "Generative AI (GenAI) is a subfield of artificial intelligence that uses generative models to generate text, images, videos, audio, computer code or other forms of digital data. The models learn the underlying patterns and structures of their training data and generate new data in response to input, often natural language prompts.",
+      "must_include": ["subfield", "generative models", "patterns", "prompts"],
+      "source": {"doc": "generative_artificial_intelligence", "section": "lead"}
+    },
+    {
+      "id": "Q04",
+      "module": "module-1",
+      "category": "definition",
+      "difficulty": "easy",
+      "answerable": true,
+      "question": "What is a large language model?",
+      "expected_answer": "A large language model (LLM) is a machine learning model trained on a vast amount of text for natural language processing tasks, especially language generation.",
+      "must_include": ["machine learning model", "vast amount of text", "language generation"],
+      "source": {"doc": "large_language_model", "section": "lead"}
+    },
+    {
+      "id": "Q05",
+      "module": "module-1",
+      "category": "definition",
+      "difficulty": "medium",
+      "answerable": true,
+      "question": "What is a foundation model, and why is building one expensive?",
+      "expected_answer": "A foundation model is a machine learning or deep learning model trained on vast datasets so that it can be applied across a wide range of use cases. Building one is highly resource-intensive - the most advanced models cost hundreds of millions of dollars, covering acquiring, curating and processing massive datasets as well as the compute required.",
+      "must_include": ["vast datasets", "wide range of use cases", "hundreds of millions"],
+      "source": {"doc": "foundation_model", "section": "lead"}
+    },
+    {
+      "id": "Q06",
+      "module": "module-1",
+      "category": "tokenization",
+      "difficulty": "medium",
+      "answerable": true,
+      "question": "Who first described byte-pair encoding and in what year? What was its original purpose?",
+      "expected_answer": "Byte-pair encoding (BPE), also called digram coding, was first described in 1994 by Philip Gage. The original version focused on compression - it replaces the highest-frequency pair of bytes with a new byte not present in the initial dataset, using a lookup table to rebuild the original data.",
+      "must_include": ["1994", "Philip Gage", "compression"],
+      "source": {"doc": "byte_pair_encoding", "section": "lead"}
+    },
+    {
+      "id": "Q07",
+      "module": "module-1",
+      "category": "tokenization",
+      "difficulty": "medium",
+      "answerable": true,
+      "question": "Why must text be tokenized before a language model can process it, and which algorithms are named for this?",
+      "expected_answer": "Machine learning algorithms process numbers rather than text, so text must be converted to numbers. A vocabulary is decided on, integer indices are uniquely assigned to each vocabulary entry, and an embedding is associated with each index. Named algorithms include byte-pair encoding (BPE) and WordPiece. Special tokens also serve as control characters, such as [MASK] in BERT.",
+      "must_include": ["numbers", "vocabulary", "byte-pair encoding", "WordPiece"],
+      "source": {"doc": "large_language_model", "section": "Dataset preprocessing / Tokenization"}
+    },
+    {
+      "id": "Q08",
+      "module": "module-1",
+      "category": "tokenization",
+      "difficulty": "hard",
+      "answerable": true,
+      "question": "How many attention heads and how large a context window did the small 117M-parameter GPT-2 model have?",
+      "expected_answer": "The small GPT-2 model, at 117M parameters, had twelve attention heads and a context window of only 1k tokens.",
+      "must_include": ["twelve", "1k", "117M"],
+      "source": {"doc": "large_language_model", "section": "Attention mechanism and context window"}
+    },
+    {
+      "id": "Q09",
+      "module": "module-1",
+      "category": "reliability",
+      "difficulty": "easy",
+      "answerable": true,
+      "question": "What is a hallucination in AI?",
+      "expected_answer": "In artificial intelligence, a hallucination (also called bullshitting, confabulation, delusion or mirage) is a response generated by AI that contains false or misleading information presented as fact. LLM-powered chatbots may embed plausible-sounding random falsehoods in their output, such as fabricated citations.",
+      "must_include": ["false or misleading", "presented as fact", "fabricated"],
+      "source": {"doc": "hallucination", "section": "lead"}
+    },
+    {
+      "id": "Q10",
+      "module": "module-1",
+      "category": "reliability",
+      "difficulty": "hard",
+      "answerable": true,
+      "question": "What did 'hallucination' originally mean in computer vision, and when was the term introduced?",
+      "expected_answer": "In computer vision, since the 2000s, hallucination meant adding detail to an image to improve it - for example generating high-resolution face images from low-resolution inputs, known as face hallucination. The term was introduced in the PhD thesis of Eric Mjolsness in 1986. Since the 2010s, hallucination has come to mean the generation of factually incorrect content.",
+      "must_include": ["adding detail", "face hallucination", "Mjolsness", "1986"],
+      "source": {"doc": "hallucination", "section": "Term / Origin"}
+    },
+    {
+      "id": "Q11",
+      "module": "module-1",
+      "category": "definition",
+      "difficulty": "easy",
+      "answerable": true,
+      "question": "What is natural language processing, and what are its major processing tasks?",
+      "expected_answer": "Natural language processing (NLP) is the processing of natural language information by a computer. It is a subfield of computer science closely associated with artificial intelligence. Major processing tasks include speech recognition, text classification, natural language understanding, and natural language generation.",
+      "must_include": ["speech recognition", "text classification", "natural language understanding", "natural language generation"],
+      "source": {"doc": "natural_language_processing", "section": "lead"}
+    },
+    {
+      "id": "Q12",
+      "module": "module-2",
+      "category": "architecture",
+      "difficulty": "hard",
+      "answerable": true,
+      "question": "Why do transformers need positional encodings, and what does that let them do better than an LSTM?",
+      "expected_answer": "Self-attention alone is permutation-invariant, so transformers inject positional information through positional encodings or learned positional embeddings, allowing token order to affect the output. Because transformers do not process tokens one at a time, their computations can be parallelized across sequence positions during training more readily than recurrent networks such as LSTM.",
+      "must_include": ["permutation-invariant", "positional", "parallelized"],
+      "source": {"doc": "transformer", "section": "lead"}
+    },
+    {
+      "id": "Q13",
+      "module": "module-2",
+      "category": "architecture",
+      "difficulty": "medium",
+      "answerable": true,
+      "question": "Write the schematic form of the attention mechanism in terms of query, key and value.",
+      "expected_answer": "A key aspect of the attention mechanism can be written schematically as the sum over i of <(query)_i, (key)_i> (value)_i, where the angled brackets denote a dot product. This shows that attention involves a multiplicative operation.",
+      "must_include": ["query", "key", "value", "dot product"],
+      "source": {"doc": "attention", "section": "lead / overview"}
+    },
+    {
+      "id": "Q14",
+      "module": "module-2",
+      "category": "architecture",
+      "difficulty": "medium",
+      "answerable": true,
+      "question": "What kind of transformer architecture is BERT, and what are its four modules?",
+      "expected_answer": "BERT is an 'encoder-only' transformer architecture. At a high level it consists of four modules: a tokenizer that converts text into a sequence of integers (tokens); an embedding module that converts tokens into real-valued vectors; an encoder, which is a stack of transformer blocks with self-attention but without causal masking; and a task head.",
+      "must_include": ["encoder-only", "tokenizer", "embedding", "encoder", "task head"],
+      "source": {"doc": "bert", "section": "Architecture"}
+    },
+    {
+      "id": "Q15",
+      "module": "module-3",
+      "category": "embeddings",
+      "difficulty": "easy",
+      "answerable": true,
+      "question": "What is a word embedding, and what property does the vector space have?",
+      "expected_answer": "In natural language processing, a word embedding is a representation of a word, typically a real-valued vector that encodes the meaning of the word such that words closer in the vector space are expected to be similar in meaning. Embeddings can be obtained through language modeling and feature learning techniques that map words or phrases from the vocabulary to vectors of real numbers.",
+      "must_include": ["real-valued vector", "closer", "similar in meaning"],
+      "source": {"doc": "word_embedding", "section": "lead"}
+    },
+    {
+      "id": "Q16",
+      "module": "module-3",
+      "category": "vector-store",
+      "difficulty": "medium",
+      "answerable": true,
+      "question": "What is a vector database, and how does its lookup differ from a traditional database?",
+      "expected_answer": "A vector database (vector store or vector search engine) stores and retrieves embeddings of data in vector space. They typically implement approximate nearest neighbor algorithms so users can search for records semantically similar to a given input, unlike traditional databases which primarily look up records by exact match. Use cases include similarity search, semantic search, recommendation engines and retrieval-augmented generation.",
+      "must_include": ["approximate nearest neighbor", "semantically similar", "exact match"],
+      "source": {"doc": "vector_database", "section": "lead"}
+    },
+    {
+      "id": "Q17",
+      "module": "module-3",
+      "category": "rag",
+      "difficulty": "medium",
+      "answerable": true,
+      "question": "What is retrieval-augmented generation, when was it first proposed, and what problem does it reduce?",
+      "expected_answer": "Retrieval-augmented generation (RAG) is a technique that enables large language models to retrieve and incorporate new information from external data sources: the LLM first refers to a specified set of documents, then responds to the query. This lets it use domain-specific or updated information not present in its training data. It was first proposed in 2020. It helps reduce AI hallucinations and reduces the need to retrain LLMs with new data, saving computational and financial cost.",
+      "must_include": ["external data sources", "2020", "hallucination", "retrain"],
+      "source": {"doc": "retrieval_augmented_generation", "section": "lead"}
+    },
+    {
+      "id": "Q18",
+      "module": "module-4",
+      "category": "prompting",
+      "difficulty": "easy",
+      "answerable": true,
+      "question": "What is prompt engineering, and how does context engineering differ from it?",
+      "expected_answer": "Prompt engineering is the process of structuring natural language inputs (prompts) to produce specified outputs from a generative AI model. Context engineering is the related area of software engineering focused on managing the non-prompt and prompt contexts supplied to the model, such as system instructions, metadata, API tools and tokens.",
+      "must_include": ["structuring", "prompts", "context engineering", "system instructions"],
+      "source": {"doc": "prompt_engineering", "section": "lead"}
+    },
+    {
+      "id": "Q19",
+      "module": "module-4",
+      "category": "fine-tuning",
+      "difficulty": "medium",
+      "answerable": true,
+      "question": "What is fine-tuning in deep learning, and what does it mean to 'freeze' layers?",
+      "expected_answer": "Fine-tuning is the process of adapting a model trained for one task (the upstream task) to perform a different, usually more specific task (the downstream task). It is a form of transfer learning, since it reuses knowledge from the original training objective. Additional training can be applied to the whole network or only a subset of its layers; layers that are not fine-tuned are 'frozen', meaning they are not changed during backpropagation.",
+      "must_include": ["upstream", "downstream", "transfer learning", "frozen", "backpropagation"],
+      "source": {"doc": "fine_tuning", "section": "lead"}
+    },
+    {
+      "id": "Q20",
+      "module": "module-4",
+      "category": "fine-tuning",
+      "difficulty": "hard",
+      "answerable": true,
+      "question": "What are adapters in the context of fine-tuning, and why are they parameter-efficient?",
+      "expected_answer": "Adapters are lightweight modules inserted into a model's architecture that nudge the embedding space for domain adaptation. They contain far fewer parameters than the original model, so they can be fine-tuned in a parameter-efficient way by tuning only the adapter weights and leaving the rest of the model's weights frozen.",
+      "must_include": ["lightweight modules", "far fewer parameters", "frozen"],
+      "source": {"doc": "fine_tuning", "section": "lead"}
+    },
+    {
+      "id": "Q21",
+      "module": "module-1",
+      "category": "out-of-scope",
+      "difficulty": "trap",
+      "answerable": false,
+      "question": "What is the attendance policy for the 25CS2207E lab, and how many sessions may a student miss?",
+      "expected_answer": "DECLINE. The corpus contains no course administration or attendance information. A grounded system must say it cannot answer from its sources.",
+      "must_include": [],
+      "source": null
+    },
+    {
+      "id": "Q22",
+      "module": "module-1",
+      "category": "out-of-scope",
+      "difficulty": "trap",
+      "answerable": false,
+      "question": "What is the exact price per million output tokens of the Groq openai/gpt-oss-20b model?",
+      "expected_answer": "DECLINE. Provider pricing is not in the corpus. This is deliberately close to Exp-05's subject matter, so a model that pattern-matches on topic rather than on sources will answer anyway - and may well invent a number.",
+      "must_include": [],
+      "source": null
+    },
+    {
+      "id": "Q23",
+      "module": "module-1",
+      "category": "out-of-scope",
+      "difficulty": "trap",
+      "answerable": false,
+      "question": "According to the corpus, which Indian language costs the most tokens per sentence under GPT-2's tokenizer, Telugu or Hindi?",
+      "expected_answer": "DECLINE. The corpus covers byte-pair encoding in general but contains no Telugu or Hindi token-count measurements. Those numbers come from the Exp-04 tokenizer lab, not from these documents.",
+      "must_include": [],
+      "source": null
+    },
+    {
+      "id": "Q24",
+      "module": "module-1",
+      "category": "out-of-scope",
+      "difficulty": "trap",
+      "answerable": false,
+      "question": "Who is the course coordinator for Generative AI and AI Platform Engineering, and what is their email address?",
+      "expected_answer": "DECLINE. No personal or course-staff information exists in the corpus, and a grounded system should refuse rather than guess at a person's identity or contact details.",
+      "must_include": [],
+      "source": null
+    }
+  ]
+}

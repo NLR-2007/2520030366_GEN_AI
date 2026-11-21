@@ -1,0 +1,17 @@
+Corpus source and licence
+=========================
+
+Every .txt file in this folder is the plain-text extract of an English
+Wikipedia article, downloaded by build_corpus.py.
+
+Text from Wikipedia is licensed under the Creative Commons
+Attribution-ShareAlike 4.0 License (CC BY-SA 4.0).
+  https://creativecommons.org/licenses/by-sa/4.0/
+  https://en.wikipedia.org/wiki/Wikipedia:Copyrights
+
+Attribution: Wikipedia contributors. The exact article URL and the revision
+id used for each file are recorded in manifest.json, so any extract can be
+traced back to the precise version it came from.
+
+This corpus is used for educational coursework (Generative AI and AI Platform
+Engineering, 25CS2207E) and is redistributed under the same licence.
