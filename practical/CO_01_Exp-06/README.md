@@ -170,7 +170,7 @@ Pass `--tpm 250000` on a developer-tier key, or `--tpm 0` to disable pacing.
 copy .env.example .env     # then paste your Groq API key
 ```
 
-The script also falls back to the shared key at the Lab root (`../.env`), like
+The script also falls back to the shared key at the practical root (`../.env`), like
 Exp-03 does.
 
 ## Run

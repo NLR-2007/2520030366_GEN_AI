@@ -24,7 +24,7 @@ pip install -r requirements.txt
 cp .env.example .env     # then fill in MONGODB_URI
 ```
 
-`.env` needs `MONGODB_URI`. The Groq API key is read from `Lab/.env`
+`.env` needs `MONGODB_URI`. The Groq API key is read from `practical/.env`
 (`GROK_API_KEY`) unless `GROQ_API_KEY` is set here.
 
 ## Run

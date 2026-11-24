@@ -24,7 +24,7 @@ except (AttributeError, OSError):
 
 BASE_DIR = Path(__file__).resolve().parent
 
-# Lab/.env holds the shared API key; Week-03/.env holds MONGODB_URI and
+# practical/.env holds the shared API key; this experiment's .env holds MONGODB_URI and
 # the price settings. The local file wins where both define a name.
 load_dotenv(BASE_DIR.parent / ".env", override=True)
 load_dotenv(BASE_DIR / ".env", override=True)

@@ -18,7 +18,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The Groq key is read from `Lab/.env` (`GROK_API_KEY`); Ollama needs `ollama serve`
+The Groq key is read from `practical/.env` (`GROK_API_KEY`); Ollama needs `ollama serve`
 running with at least one model pulled.
 
 In-chat commands: `/switch` change provider · `/clear` reset history · `/exit` quit.

@@ -97,7 +97,7 @@ def load_dotenv():
                         os.environ[k] = v
         except OSError:
             pass
-    # Fall back to the shared key at the Lab root, like Exp-03 does.
+    # Fall back to the shared key at the practical root, like Exp-03 does.
     if not os.environ.get("GROQ_API_KEY"):
         shared = os.path.join(os.path.dirname(HERE), ".env")
         if os.path.exists(shared):

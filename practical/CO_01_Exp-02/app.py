@@ -37,14 +37,14 @@ NON_CHAT = ("whisper", "orpheus", "prompt-guard", "tts", "embed", "guard")
 
 def groq_models():
     if not GROQ_KEY:
-        raise RuntimeError("No API key found. Add GROK_API_KEY to Lab/.env")
+        raise RuntimeError("No API key found. Add GROK_API_KEY to practical/.env")
     res = requests.get(
         f"{GROQ_BASE}/models",
         headers={"Authorization": f"Bearer {GROQ_KEY}"},
         timeout=30,
     )
     if res.status_code == 401:
-        raise RuntimeError("Groq rejected the API key (401). Check Lab/.env")
+        raise RuntimeError("Groq rejected the API key (401). Check practical/.env")
     res.raise_for_status()
     ids = [m["id"] for m in res.json().get("data", [])]
     return sorted(i for i in ids if not any(w in i.lower() for w in NON_CHAT))

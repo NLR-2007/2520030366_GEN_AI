@@ -13,7 +13,7 @@ import requests
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request, send_from_directory
 
-# .env lives one level up, in the Lab/ folder
+# .env lives one level up, in practical/
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR.parent / ".env")
 
@@ -32,7 +32,7 @@ def index():
 @app.post("/api/chat")
 def chat():
     if not API_KEY:
-        return jsonify(error="GROK_API_KEY is missing from Lab/.env"), 500
+        return jsonify(error="GROK_API_KEY is missing from practical/.env"), 500
 
     body = request.get_json(silent=True) or {}
     prompt = (body.get("prompt") or "").strip()
@@ -78,5 +78,5 @@ def chat():
 
 if __name__ == "__main__":
     if not API_KEY:
-        print("WARNING: GROK_API_KEY not found in Lab/.env")
+        print("WARNING: GROK_API_KEY not found in practical/.env")
     app.run(debug=True, port=5000)
